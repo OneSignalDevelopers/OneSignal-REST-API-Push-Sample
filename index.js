@@ -32,7 +32,7 @@ const optionsBuilder = (method, path, body) => {
  * @returns {object} notificationInfo
  */
 
-const createNotication = async(body) => {
+const createNotication = (body) => {
     let notificationId = "";
     const options = optionsBuilder("POST","notifications", body);
     request(options, (error, response) => {

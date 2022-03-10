@@ -1,6 +1,6 @@
 const request = require('request');
-const API_KEY = "YOUR_API_KEY";
-const ONE_SIGNAL_APP_ID = "ONE_SIGNAL_APP_ID";
+const API_KEY = "ZDNmYTQwZmEtZmJmNS00MzJmLThjYjktODRmN2YyM2FjM2Vm";
+const ONE_SIGNAL_APP_ID = "4b61ac0e-634e-4873-a709-1eb12d0d90b3";
 const BASE_URL = "https://onesignal.com/api/v1";
 
 /**
@@ -11,28 +11,29 @@ const BASE_URL = "https://onesignal.com/api/v1";
  * @returns {object} options
  */
 const optionsBuilder = (method, path, body) => {
-    const options = {
-        'method': method,
+    return {
+        method,
         'url': `${BASE_URL}/${path}`,
         'headers': {
             'Content-Type': 'application/json',   
             'Authorization': `Basic ${API_KEY}`,
         },
         body: body ? JSON.stringify(body) : null,
-      };
-    
-    return options;
+    };
 }
 
 /**
  * CREATE A PUSH NOTIFICATION
  * method: POST
+ * Postman: https://www.postman.com/onesignaldevs/workspace/onesignal-api/request/16845437-c4f3498f-fd80-4304-a6c1-a3234b923f2c
+ * API Reference: https://documentation.onesignal.com/reference#create-notification
  * path: /notifications
  * @param {object} body
  */
 
 const createNotication = (body) => {
     const options = optionsBuilder("POST","notifications", body);
+    console.log(options);
     request(options, (error, response) => {
         if (error) throw new Error(error);
         console.log(response.body);
@@ -43,6 +44,8 @@ const createNotication = (body) => {
 /**
  * VIEW NOTIFICATION
  * method: GET
+ * Postman: https://www.postman.com/onesignaldevs/workspace/onesignal-api/request/16845437-6c96ecf0-5882-4eac-a386-0d0cabc8ecd2
+ * API Reference: https://documentation.onesignal.com/reference#view-notification
  * path: /notifications/{notification_id}?app_id=${ONE_SIGNAL_APP_ID}
  * @param {string} notificationId
  */

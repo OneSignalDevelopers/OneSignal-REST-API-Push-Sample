@@ -29,18 +29,15 @@ const optionsBuilder = (method, path, body) => {
  * method: POST
  * path: /notifications
  * @param {object} body
- * @returns {object} notificationInfo
  */
 
 const createNotication = (body) => {
-    let notificationId = "";
     const options = optionsBuilder("POST","notifications", body);
     request(options, (error, response) => {
         if (error) throw new Error(error);
         console.log(response.body);
         viewNotifcation(JSON.parse(response.body).id);
     });
-    return notificationId;
 }
 
 /**

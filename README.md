@@ -1,5 +1,14 @@
 # OneSignal NodeJS-Push-Notifications-Sample
 
+<p>
+  <a href="https://github.com/OneSignal/onesignal-expo-plugin/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://twitter.com/onesignaldevs" target="_blank">
+    <img alt="Twitter: onesignaldevelopers" src="https://img.shields.io/twitter/follow/onesignaldevs?style=social" />
+  </a>
+</p>
+
 This sample NodeJS app demonstrates how to send push notifications to your app using the OneSignal REST API.
 
 This project was generated with [NodeJS](https://nodejs.org/de/blog/release/v14.16.0/) version v14.16.0
@@ -32,6 +41,12 @@ This function generated an options object containing the information need it to 
 ```
 
 ### Create Notification
+
+Create a push notification and send it to your users of your app.
+
+- [Postman](https://www.postman.com/onesignaldevs/workspace/onesignal-api/request/16845437-c4f3498f-fd80-4304-a6c1-a3234b923f2c)
+- [REST API Reference](https://documentation.onesignal.com/reference#create-notification)
+
 ```javascript
 const createNotication = (body) => {
     const options = optionsBuilder("POST","notifications", body);
@@ -44,7 +59,10 @@ const createNotication = (body) => {
 ```
 ### View Notification
 
-View the details from a push notification you have sent using OneSignal
+View the details from a push notification you have sent using OneSignal.
+
+- [Postman](https://www.postman.com/onesignaldevs/workspace/onesignal-api/request/16845437-6c96ecf0-5882-4eac-a386-0d0cabc8ecd2)
+- [REST API Reference](https://documentation.onesignal.com/reference#view-notification)
 
 ```javascript
 const viewNotifcation = (notificationId) => {
@@ -57,3 +75,15 @@ const viewNotifcation = (notificationId) => {
     });
 }
 ```
+
+### OneSignal Community
+
+#### Join the OneSignal Developers Community
+The OneSignal Developer community is a group of passionate individuals who work with OneSignal products. Community members have the opportunity to expand their network and knowledge across different technologies.
+
+#### TWITTER
+Follow our [OneSignal Developers Twitter](https://twitter.com/OneSignalDevs) to learn more about OneSignal, technical tips, and the latest events from OneSignal developers.
+
+#### DISCORD SERVER
+The OneSignal Developer community gathers on our public chat server, available on Discord. [Our Discord server](https://discord.gg/EP7gf6Uz7G) is a safe environment to network with other members, ask questions, and learn from each other. It is also a place to engage with the OneSignal product development team.
+

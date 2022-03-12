@@ -13,13 +13,15 @@ This sample NodeJS app demonstrates how to send push notifications to your app u
 
 This project was generated with [NodeJS](https://nodejs.org/de/blog/release/v14.16.0/) version v14.16.0
 
+Take a look at the [OneSignal documentation](https://documentation.onesignal.com/docs) to learn how to integrate OneSignal into your project. After you have integrated OneSignal into your application, you can use NodeJS to send push notification using the OneSignal REST API.
+
 ## Development server
 
 - Install project dependencie by running `npm i` (npm install).
 
 - Run `npm run start` for a dev server. The app will automatically run the `createNotication()` which will make a call to our API to create a notficationwhich will be sent to your app.
 
-### OptionsBuilder
+### Options Builder
 
 This function generated an options object containing the information need it to make the API call. Below you can find a sample object generated after running the `optionsBuilder(method, path, body)` function. This function was created for reusability purposes, no need to have this function to run the OneSignal REST API, all you need is an options object.
 

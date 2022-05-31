@@ -10,6 +10,7 @@
   "author": "OneSignal Developers",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "request": "^2.88.2"
   }
 }

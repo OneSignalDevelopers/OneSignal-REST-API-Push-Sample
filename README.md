@@ -23,7 +23,7 @@ Take a look at the [OneSignal documentation](https://documentation.onesignal.com
 
 ### Options Builder
 
-This function generated an options object containing the information need it to make the API call. Below you can find a sample object generated after running the `optionsBuilder(method, path, body)` function. This function was created for reusability purposes, no need to have this function to run the OneSignal REST API, all you need is an options object.
+This is a helper function created for this code sample. This helper function generates an options object containing the information need it to make the API call. Below you can find a sample object generated after running the `optionsBuilder(method, path, body)` function. This function was created for reusability purposes, no need to have this function to run the OneSignal REST API, all you need is an options object.
 
 ```javascript
 {

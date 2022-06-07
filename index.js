@@ -1,7 +1,7 @@
 const request = require('request');
 require('dotenv').config();
 const API_KEY = process.env.onesignal_api_key;
-const ONE_SIGNAL_APP_ID = "4b61ac0e-634e-4873-a709-1eb12d0d90b3";
+const ONE_SIGNAL_APP_ID = "YOUR ONESIGNAL APP ID";
 const BASE_URL = "https://onesignal.com/api/v1";
 
 /**

@@ -1,7 +1,7 @@
 const request = require('request');
 require('dotenv').config();
 const API_KEY = process.env.onesignal_api_key;
-const ONE_SIGNAL_APP_ID = "YOUR ONESIGNAL APP ID";
+const ONESIGNAL_APP_ID = "YOUR ONESIGNAL APP ID";
 const BASE_URL = "https://onesignal.com/api/v1";
 
 /**
@@ -52,7 +52,7 @@ const createNotication = (body) => {
  */
 const viewNotifcation = (notificationId) => {
 
-    const path = `notifications/${notificationId}?app_id=${ONE_SIGNAL_APP_ID}`;
+    const path = `notifications/${notificationId}?app_id=${ONESIGNAL_APP_ID}`;
     const options = optionsBuilder("GET", path);
     request(options, (error, response)=> {
         if (error) throw new Error(error);
@@ -64,7 +64,7 @@ const viewNotifcation = (notificationId) => {
  * RUN THE NODE JS APP
  */
 const body = {
-    app_id: ONE_SIGNAL_APP_ID,
+    app_id: ONESIGNAL_APP_ID,
     included_segments: ['Subscribed Users'],
     data: {
       foo: 'bar',

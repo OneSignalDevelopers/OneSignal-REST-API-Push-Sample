@@ -1,4 +1,4 @@
-# OneSignal NodeJS-Push-Notifications-Sample
+# OneSignal REST API Push Sample
 
 <p>
   <a href="https://github.com/OneSignal/onesignal-expo-plugin/graphs/commit-activity" target="_blank">
